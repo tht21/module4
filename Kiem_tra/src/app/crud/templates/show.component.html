@@ -1,0 +1,33 @@
+<!-- Modal -->
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="staticBackdropLabel">Chi tiết sản phẩm</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+      <form [formGroup]="productForm" (ngSubmit)="showProduct(id)">
+        `
+        <label for="exampleInputEmail1" class="form-label">Mã sản phẩm:</label>
+        <input type="number" formControlName="id" class="form-control" id="exampleInputEmail1"
+               aria-describedby="emailHelp">
+
+        <label for="exampleInputPassword1" class="form-label">Tên sản phẩm:</label>
+        <input type="text" formControlName="name" class="form-control" id="exampleInputPassword1">
+
+        <label for="exampleInputPassword2" class="form-label">Giá sản phẩm:</label>
+        <input type="number" formControlName="price" class="form-control" id="exampleInputPassword2">
+
+        <label for="exampleInputPassword4" class="form-label">Mô tả về sản phẩm:</label>
+        <input type="text" formControlName="name" class="form-control" id="exampleInputPassword4">
+
+        <div class="modal-footer">
+
+          <button class="btn btn-primary">close</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</div>
+
