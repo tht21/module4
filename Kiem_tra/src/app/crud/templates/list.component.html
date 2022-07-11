@@ -12,13 +12,13 @@
 
   <tr *ngFor="let product of products; index as i">
     <td>{{i + 1}}</td>
-    <td>{{product.name}}</td>
+     <td ><a style="  color: #040404;  text-decoration: none;" [routerLink]="['/show',product.id]">{{product.name}}</a></td>
     <td>{{product.price}}</td>
     <td>{{product.description}}</td>
     <td>
-      <a [routerLink]="['/show',product.id]">
-        <button class="btn btn-info " data-bs-target="#staticBack" data-bs-toggle="modal" type="button">show</button>
-      </a>
+
+
+
       <a [routerLink]="['/edit',product.id]">
         <button class="btn btn-info mx-3" data-bs-target="#staticBack" data-bs-toggle="modal" type="button">edit</button>
       </a>
